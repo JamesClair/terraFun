@@ -1,2 +1,2 @@
-# terraTraining
-Terraform training
+# terraFun
+Terraform testing
