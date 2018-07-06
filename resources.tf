@@ -11,3 +11,9 @@ resource "aws_vpc" "TFnetworkAWS" {
     Name = "TFnetworkAWS"
   }
 }
+
+resource "aws_subnet" "AWSsubnet1" {
+  cidr_block = "${cidrsubnet(aws_vpc.TFnetworkAWS.cidr_block, 3, 1)}"
+  vpc_id = "${aws_vpc.TFnetworkAWS.id}"
+  availability_zone = "us-east-1a"
+}
