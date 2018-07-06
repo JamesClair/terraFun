@@ -23,3 +23,16 @@ resource "aws_subnet" "AWSsubnet2" {
   vpc_id = "${aws_vpc.TFnetworkAWS.id}"
   availability_zone = "us-east-1b"
 }
+
+resource "aws_security_group" "TFnetworksecurity" {
+  vpc_id = "${aws_vpc.TFnetworkAWS.id}"
+
+  ingress {
+    cidr_blocks = [
+      "${aws_vpc.TFnetworkAWS.cidr_block}"
+    ]
+    from_port = 80
+    protocol = "tcp"
+    to_port = 80
+  }
+}
