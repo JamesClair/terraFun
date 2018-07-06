@@ -1,6 +1,6 @@
 resource "google_compute_network" "tfnetworkgcp" {
   name = "tfnetworkgcp"
-  auto_create_subnetworks = true
+  auto_create_subnetworks = false
 }
 
 resource "aws_vpc" "TFnetworkAWS" {
