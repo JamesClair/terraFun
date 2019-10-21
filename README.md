@@ -1,2 +1,2 @@
 # terraFun
-Terraform testing
+My repository for testing out Terraform.
